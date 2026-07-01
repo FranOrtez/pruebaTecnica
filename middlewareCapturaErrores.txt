@@ -1,0 +1,92 @@
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
+using System;
+using System.Collections.Generic;
+using System.Net;
+using System.Text.Json;
+using System.Threading.Tasks;
+
+public class ExceptionHandlingMiddleware
+{
+    private readonly RequestDelegate _next;
+    private readonly ILogger<ExceptionHandlingMiddleware> _logger;
+    private readonly IHostEnvironment _env;
+
+    public ExceptionHandlingMiddleware(RequestDelegate next, ILogger<ExceptionHandlingMiddleware> logger, IHostEnvironment env)
+    {
+        _next = next;
+        _logger = logger;
+        _env = env;
+    }
+
+    public async Task InvokeAsync(HttpContext context)
+    {
+        try
+        {
+            await _next(context);
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Ocurrió una excepción no controlada durante la solicitud.");
+            await HandleExceptionAsync(context, ex);
+        }
+    }
+
+    private Task HandleExceptionAsync(HttpContext context, Exception exception)
+    {
+        context.Response.ContentType = "application/problem+json";
+
+        // Determinar el código de estado basado en el tipo de excepción
+        var statusCode = exception switch
+        {
+            ArgumentException or InvalidOperationException => HttpStatusCode.BadRequest,
+            KeyNotFoundException => HttpStatusCode.NotFound,
+            UnauthorizedAccessException => HttpStatusCode.Unauthorized,
+            _ => HttpStatusCode.InternalServerError
+        };
+
+        context.Response.StatusCode = (int)statusCode;
+
+        // Construir la respuesta basada en RFC 7807 usando la clase nativa ProblemDetails
+        var problemDetails = new ProblemDetails
+        {
+            Status = context.Response.StatusCode,
+            Type = $"https://httpstatuses.io/{(int)statusCode}",
+            Title = GetTitleForStatusCode(statusCode),
+            Detail = exception.Message,
+            Instance = context.Request.Path
+        };
+
+        // Agregar información de depuración (StackTrace) solo en ambiente DEV
+        if (_env.IsDevelopment())
+        {
+            problemDetails.Extensions["stackTrace"] = exception.StackTrace;
+        }
+
+        // Configurar opciones de serialización para mantener consistencia camelCase
+        var jsonOptions = new JsonSerializerOptions
+        {
+            PropertyNamingPolicy = JsonNamingPolicy.CamelCase
+        };
+
+        var jsonResponse = JsonSerializer.Serialize(problemDetails, jsonOptions);
+        return context.Response.WriteAsync(jsonResponse);
+    }
+
+    private string GetTitleForStatusCode(HttpStatusCode statusCode) =>
+        statusCode switch
+        {
+            HttpStatusCode.BadRequest => "Solicitud incorrecta o parámetros inválidos.",
+            HttpStatusCode.NotFound => "El recurso solicitado no fue encontrado.",
+            HttpStatusCode.Unauthorized => "No autorizado para realizar esta acción.",
+            _ => "Ocurrió un error interno en el servidor."
+        };
+}
+
+--------------------------------------------------------------------------------------------
+
+//Registro del pipeline en program antes de routing de controllers autentication
+app.UseMiddleware<ExceptionHandlingMiddleware>();
+
