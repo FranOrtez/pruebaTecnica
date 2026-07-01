@@ -1,0 +1,15 @@
+C:\Users\FranO\Desktop\SERFINSA\PruebaTecnicaLocal\BackEnd\ProductManagement.Application\bin\Debug\net10.0\ProductManagement.Application.deps.json
+C:\Users\FranO\Desktop\SERFINSA\PruebaTecnicaLocal\BackEnd\ProductManagement.Application\bin\Debug\net10.0\ProductManagement.Application.dll
+C:\Users\FranO\Desktop\SERFINSA\PruebaTecnicaLocal\BackEnd\ProductManagement.Application\bin\Debug\net10.0\ProductManagement.Application.pdb
+C:\Users\FranO\Desktop\SERFINSA\PruebaTecnicaLocal\BackEnd\ProductManagement.Application\bin\Debug\net10.0\ProductManagement.Domain.dll
+C:\Users\FranO\Desktop\SERFINSA\PruebaTecnicaLocal\BackEnd\ProductManagement.Application\bin\Debug\net10.0\ProductManagement.Domain.pdb
+C:\Users\FranO\Desktop\SERFINSA\PruebaTecnicaLocal\BackEnd\ProductManagement.Application\obj\Debug\net10.0\ProductManagement.Application.csproj.AssemblyReference.cache
+C:\Users\FranO\Desktop\SERFINSA\PruebaTecnicaLocal\BackEnd\ProductManagement.Application\obj\Debug\net10.0\ProductManagement.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\FranO\Desktop\SERFINSA\PruebaTecnicaLocal\BackEnd\ProductManagement.Application\obj\Debug\net10.0\ProductManagement.Application.AssemblyInfoInputs.cache
+C:\Users\FranO\Desktop\SERFINSA\PruebaTecnicaLocal\BackEnd\ProductManagement.Application\obj\Debug\net10.0\ProductManagement.Application.AssemblyInfo.cs
+C:\Users\FranO\Desktop\SERFINSA\PruebaTecnicaLocal\BackEnd\ProductManagement.Application\obj\Debug\net10.0\ProductManagement.Application.csproj.CoreCompileInputs.cache
+C:\Users\FranO\Desktop\SERFINSA\PruebaTecnicaLocal\BackEnd\ProductManagement.Application\obj\Debug\net10.0\ProductM.070BD2B7.Up2Date
+C:\Users\FranO\Desktop\SERFINSA\PruebaTecnicaLocal\BackEnd\ProductManagement.Application\obj\Debug\net10.0\ProductManagement.Application.dll
+C:\Users\FranO\Desktop\SERFINSA\PruebaTecnicaLocal\BackEnd\ProductManagement.Application\obj\Debug\net10.0\refint\ProductManagement.Application.dll
+C:\Users\FranO\Desktop\SERFINSA\PruebaTecnicaLocal\BackEnd\ProductManagement.Application\obj\Debug\net10.0\ProductManagement.Application.pdb
+C:\Users\FranO\Desktop\SERFINSA\PruebaTecnicaLocal\BackEnd\ProductManagement.Application\obj\Debug\net10.0\ref\ProductManagement.Application.dll

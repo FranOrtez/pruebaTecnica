@@ -1,0 +1,11 @@
+C:\Users\FranO\Desktop\SERFINSA\PruebaTecnicaLocal\BackEnd\ProductManagement.Domain\bin\Debug\net10.0\ProductManagement.Domain.deps.json
+C:\Users\FranO\Desktop\SERFINSA\PruebaTecnicaLocal\BackEnd\ProductManagement.Domain\bin\Debug\net10.0\ProductManagement.Domain.dll
+C:\Users\FranO\Desktop\SERFINSA\PruebaTecnicaLocal\BackEnd\ProductManagement.Domain\bin\Debug\net10.0\ProductManagement.Domain.pdb
+C:\Users\FranO\Desktop\SERFINSA\PruebaTecnicaLocal\BackEnd\ProductManagement.Domain\obj\Debug\net10.0\ProductManagement.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\FranO\Desktop\SERFINSA\PruebaTecnicaLocal\BackEnd\ProductManagement.Domain\obj\Debug\net10.0\ProductManagement.Domain.AssemblyInfoInputs.cache
+C:\Users\FranO\Desktop\SERFINSA\PruebaTecnicaLocal\BackEnd\ProductManagement.Domain\obj\Debug\net10.0\ProductManagement.Domain.AssemblyInfo.cs
+C:\Users\FranO\Desktop\SERFINSA\PruebaTecnicaLocal\BackEnd\ProductManagement.Domain\obj\Debug\net10.0\ProductManagement.Domain.csproj.CoreCompileInputs.cache
+C:\Users\FranO\Desktop\SERFINSA\PruebaTecnicaLocal\BackEnd\ProductManagement.Domain\obj\Debug\net10.0\ProductManagement.Domain.dll
+C:\Users\FranO\Desktop\SERFINSA\PruebaTecnicaLocal\BackEnd\ProductManagement.Domain\obj\Debug\net10.0\refint\ProductManagement.Domain.dll
+C:\Users\FranO\Desktop\SERFINSA\PruebaTecnicaLocal\BackEnd\ProductManagement.Domain\obj\Debug\net10.0\ProductManagement.Domain.pdb
+C:\Users\FranO\Desktop\SERFINSA\PruebaTecnicaLocal\BackEnd\ProductManagement.Domain\obj\Debug\net10.0\ref\ProductManagement.Domain.dll

@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "/ksT4M/gvz8=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\FranO\\Desktop\\SERFINSA\\PruebaTecnicaLocal\\BackEnd\\ProductManagement.Application\\ProductManagement.Application.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\FranO\\.nuget\\packages\\bcrypt.net-next\\4.2.0\\bcrypt.net-next.4.2.0.nupkg.sha512"
+  ],
+  "logs": []
+}
